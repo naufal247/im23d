@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Muhammad Khafid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="navbar" id="navbar">
+            <div class="menu">
+                <a href="index.html">HOME</a>
+                <a href="profile.html">PROFILE</a>
+                <a href="galery.html">GALLERY</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="daftar.html">DAFTAR</a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>SELAMAT DATANG</h1>
+            <h2>DI WEBSITE MUHAMMAD KHAFID</h2>
+            <p>Berisikan tentang berbagai hal yang ada pada diri Khafid itu sendiri. Temukan informasi menarik tentang kegiatan, minat, serta karya-karya Khafid dalam website ini. Selamat menjelajahi!</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk menambahkan efek scroll pada navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

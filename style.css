@@ -1,0 +1,105 @@
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .background {
+            background-image: url(gambar/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 40px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .navbar .menu a:hover {
+            color: #7bb0ff;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .content h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .content h2 {
+            font-size: 30px;
+            font-weight: 300;
+            margin: 10px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .content p {
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 40px;
+            }
+            .content h2 {
+                font-size: 24px;
+            }
+        }
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 32px;
+            }
+            .content h2 {
+                font-size: 20px;
+            }
+        }
+
+        

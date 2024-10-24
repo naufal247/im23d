@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Dua Kolom</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid rgb(31, 2, 2);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- <tr>
+            <th>Kolom 1</th>
+            <th>Kolom 2</th>
+        </tr>
+        <tr> -->
+            <td>
+                <label for="fname">Nama Depan:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+            
+            </td>
+            <td>
+                <label for="lname">Nama Belakang:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+            
+            </td>
+        </tr>
+        <tr>
+            <td><label for="hp">Handphone:</label><br>
+                <input type="number" id="hp" name="hp"><br>
+            
+            </td>
+            <td>
+                <label for="email">E-Mail:</label><br>
+                <input type="email" id="email" name="email"><br>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fname">Jenis Kelamin:</label><br>
+
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Laki-laki</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Perempuan</label><br>
+            
+            </td>
+            <td>
+                <label for="fname">Alamat Lengkap:</label><br>
+
+                <textarea placeholder="Silahkan Masukkan alamat lengkap anda"></textarea><br>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="jpekerjaan">Jenis Pekerjaan:</label><br>
+            <select id="jpekerjaan" name="jpekerjaan">
+                <option value="">--Silahkan Pilih--</option>
+                <option value="guru">Guru</option>
+                <option value="dosen">Dosen</option>
+                <option value="PNS">PNS</option>
+                <option value="dpr">DPR</option>
+                <option value="Swasta">Swasta</option>
+                <option value="Wirausaha">Wirausaha</option>
+            </select>
+            </td>
+            
+            
+            <td>
+                <label for="agama">Agama:</label><br>
+            <select id="agama" name="agama">
+                <option value="">--Silahkan Pilih--</option>
+                <option value="islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Budha">Budha</option>
+                <option value="Khatolik">Khatolik</option>
+                <option value="Khonghuchu">Khonghuchu</option>
+            </select>
+            </td>
+
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

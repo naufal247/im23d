@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Muhammad Khafid</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .background {
+            background-image: url(gambar/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 40px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .navbar .menu a:hover {
+            color: #7bb0ff;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .profile-picture {
+            flex: 1;
+            max-width: 200px;
+            margin-right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0; /* Initially hidden for animation */
+            transform: translateY(-20px); /* Initial position for animation */
+            animation: fadeInUp 1s forwards; /* Apply animation */
+        }
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .content-text {
+            flex: 2;
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: 300;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .content p {
+            margin-top: 20px;
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 40px;
+            }
+            .profile-picture {
+                max-width: 150px;
+            }
+        }
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 32px;
+            }
+            .profile-picture {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="navbar" id="navbar">
+            <div class="menu">
+                <a href="index.html">HOME</a>
+                <a href="profile.html">PROFILE</a>
+                <a href="galery.html">GALLERY</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="daftar.html">DAFTAR</a>
+            </div>
+        </div>
+
+        <!-- <div class="content"> -->
+            <!-- <div class="profile-picture">
+                <img src="gambar/profile.jpg" alt="Foto Profil Muhammad Khafid">
+            </div>
+            <div class="content-text">
+                <h1>Halo Semuanya</h1>
+                <p>Izinkan saya untuk memperkenalkan diri. Nama saya Muhammad Khafid. Saya lahir di Pekalongan, pada 03 Desember 1999. Makanan favorit saya adalah roti, sedangkan minuman favorit saya adalah air mineral. Saya sangat suka traveling ke gunung dan pantai bersama dengan sahabat-sahabat saya. Saya juga suka menulis puisi jika ada waktu senggang. Saya mempunyai hobi bermain sepak bola. Saya pikir, cukup sekian informasi tentang saya. Terima kasih.</p>
+            </div> -->
+
+            <form>
+                <div>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+
+
+                </div>
+
+                <div>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+
+
+                </div>
+                
+                
+                <label for="hp">Handphone:</label><br>
+                <input type="number" id="hp" name="hp"><br>
+                <label for="fname">Jenis Kelamin:</label><br>
+
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Laki-laki</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Perempuan</label><br>
+                <label for="fname">Alamat Lengkap:</label><br>
+
+                <textarea placeholder="Silahkan Masukkan alamat lengkap anda"></textarea><br>
+                <label for="cars">Jenis Pekerjaan:</label><br>
+                <select id="cars" name="cars">
+                    <option value="">--Silahkan Pilih--</option>
+                    <option value="guru">Guru</option>
+                    <option value="dosen">Dosen</option>
+                    <option value="PNS">PNS</option>
+                    <option value="dpr">DPR</option>
+                    <option value="Swasta">Swasta</option>
+                    <option value="Wirausaha">Wirausaha</option>
+                </select>
+
+                <br>
+                <br>
+                <br>
+
+
+
+                <table>
+                    <!-- <tr>
+                        <th>Kolom 1</th>
+                        <th>Kolom 2</th>
+                    </tr>-->
+                    <tr>
+                        <td>
+                            <label for="fname">Nama Depan:</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                        
+                        </td>
+                        <td>
+                            <label for="lname">Nama Belakang:</label><br>
+                            <input type="text" id="lname" name="lname"><br>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="hp">Handphone:</label><br>
+                            <input type="number" id="hp" name="hp"><br>
+                        
+                        </td>
+                        <td>
+                            <label for="email">E-Mail:</label><br>
+                            <input type="email" id="email" name="email"><br>
+            
+            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname">Jenis Kelamin:</label><br>
+
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Laki-laki</label><br>
+                            <input type="radio" id="css" name="fav_language" value="CSS">
+                            <label for="css">Perempuan</label><br>
+                        
+                        </td>
+                        <td>
+                            <label for="fname">Alamat Lengkap:</label><br>
+
+                            <textarea placeholder="Silahkan Masukkan alamat lengkap anda"></textarea><br>
+            
+            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="jpekerjaan">Jenis Pekerjaan:</label><br>
+                        <select id="jpekerjaan" name="jpekerjaan">
+                            <option value="">--Silahkan Pilih--</option>
+                            <option value="guru">Guru</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="PNS">PNS</option>
+                            <option value="dpr">DPR</option>
+                            <option value="Swasta">Swasta</option>
+                            <option value="Wirausaha">Wirausaha</option>
+                        </select>
+                        </td>
+                        
+                        
+                        <td>
+                            <label for="agama">Agama:</label><br>
+                        <select id="agama" name="agama">
+                            <option value="">--Silahkan Pilih--</option>
+                            <option value="islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Khatolik">Khatolik</option>
+                            <option value="Khonghuchu">Khonghuchu</option>
+                        </select>
+                        </td>
+            
+            
+                        </td>
+                    </tr>
+                    <tr></tr>
+                        <td>
+                            <label for="ttl">Tanggal Lahir:</label><br>
+                            <input type="date" id="ttl" name="ttl"><br>
+                        
+                        </td>
+                        <td>
+                            <label for="nik">NIK / KTP:</label><br>
+                            <input type="number" id="nik" name="nik" minlength="15" maxlength="16"><br>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
+
+                <br><br>
+                <br><br>
+                
+
+
+
+            </form>
+
+
+
+
+
+
+        <!-- </div> -->
+    </div>
+
+    <script>
+        // JavaScript untuk menambahkan efek scroll pada navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

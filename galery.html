@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Muhammad Khafid</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .background {
+            background-image: url(gambar/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 40px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .navbar .menu a:hover {
+            color: #7bb0ff;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 100px 20px 20px; /* Adjusted for sticky navbar */
+        }
+        .gallery {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            max-width: 300px;
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+        }
+        .gallery:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-color: #7bb0ff;
+        }
+        .gallery img {
+            width:100%;
+            height: auto;
+            aspect-ratio: 16/9; /* Maintain a consistent aspect ratio */
+            object-fit:contain; /* Ensures the image fits within the box without cropping */
+            border-bottom: 1px solid #ccc;
+        }
+        .desc {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #333;
+            color: #ddd;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .gallery {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="navbar" id="navbar">
+            <div class="menu">
+                <a href="index.html">HOME</a>
+                <a href="profile.html">PROFILE</a>
+                <a href="galery.html">GALLERY</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery">
+                <a target="_blank" href="gambar/1.jpg">
+                    <img src="gambar/1.jpg" alt="Image 1">
+                </a>
+                <div class="desc">Kebahagiaanmu adalah pilihanmu. Pilihlah dengan bijak.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="gambar/2.jpg">
+                    <img src="gambar/2.jpg" alt="Image 2">
+                </a>
+                <div class="desc">Setiap langkah kecil yang kamu ambil menuju impianmu adalah sebuah kemajuan.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="gambar/3.jpg">
+                    <img src="gambar/3.jpg" alt="Image 3">
+                </a>
+                <div class="desc">Jangan takut untuk gagal; takutlah untuk tidak mencoba.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="gambar/4.jpg">
+                    <img src="gambar/4.jpg" alt="Image 4">
+                </a>
+                <div class="desc">Masa depan milik mereka yang percaya pada keindahan impian mereka.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="gambar/5.jpg">
+                    <img src="gambar/5.jpg" alt="Image 5">
+                </a>
+                <div class="desc">Belajarlah dari kemarin, hiduplah untuk hari ini, berharaplah untuk besok.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="gambar/6.jpg">
+                    <img src="gambar/6.jpg" alt="Image 6">
+                </a>
+                <div class="desc">Perubahan dimulai dari diri sendiri. Jadilah inspirasi untuk orang lain.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk menambahkan efek scroll pada navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
